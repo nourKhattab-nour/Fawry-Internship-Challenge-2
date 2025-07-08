@@ -45,14 +45,14 @@ public class FawryTask2 {
             double amount2 = bookstore.buyBook("EB001", 1, "customer@email.com", "123 Main St");
             System.out.println("Quantum book store: Paid amount: $" + amount2);
             
-            // Test buying showcase book (should fail)
+            // Test buying showcase book
             try {
                 bookstore.buyBook("SB001", 1, "customer@email.com", "123 Main St");
             } catch (RuntimeException e) {
                 System.out.println("Quantum book store: Error - " + e.getMessage());
             }
             
-            // Test buying too many paper books (should fail)
+            // Test buying too many paper books
             try {
                 bookstore.buyBook("PB001", 100, "customer@email.com", "123 Main St");
             } catch (RuntimeException e) {
